@@ -7,11 +7,11 @@ contract CrazyToken is ERC20Interface, owned {
     string public constant symbol = "CRAZY";
     string public constant name = "CRAZY TOKEN";
     uint8 public constant decimals = 0;
-    uint246 _totalSupply = 10000000000;
+    uint256 _totalSupply = 10000000000;
 
     mapping (address => uint256) _balances;
 
-    mapping (addess => mapping (address => uint256)) _allowed;
+    mapping (address => mapping (address => uint256)) _allowed;
    
     function CrazyToken() public {
         _balances[_owner] = _totalSupply;
