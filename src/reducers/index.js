@@ -1,4 +1,10 @@
-import { WEB3_CONNECTED, TODO_ADDED, TODOS_CONTRACT_INSTANTIATED, TODOS_FETCHED, defaultState } from '../actions';
+import {
+  WEB3_CONNECTED,
+  TODO_ADDED,
+  TODOS_CONTRACT_INSTANTIATED,
+  TODOS_FETCHED,
+  defaultState
+} from '../actions';
 
 const todos = (state = defaultState, action) => {
   switch (action.type) {
