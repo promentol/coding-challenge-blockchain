@@ -5,5 +5,13 @@ import "truffle/DeployedAddresses.sol";
 import "../contracts/CrazyToken.sol";
 
 contract TestCrazyToken {
+    function testOwnersFunds() public {
+        CrazyToken token = CrazyToken(DeployedAddresses.CrazyToken());
 
+        uint256 totalNumbers = token.totalSupply();
+        uint256 balanceOfOwner = token.balanceOf(tx.origin);
+
+        Assert.equal(balanceOfOwner, totalNumbers, "Owner Should have all funds"); 
+
+    }
 }
